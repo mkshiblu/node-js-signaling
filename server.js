@@ -102,3 +102,8 @@ const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => {
     console.log(`Signaling server is running on http://localhost:${PORT}..`);
 });
+
+// Default GET endpoint (Keep-Alive)
+app.get('/', (req, res) => {
+    res.status(200).send('Server is alive');
+});
